@@ -9,6 +9,6 @@ if (-not(Test-Path -Path "C:/JungolTemp")) {
 New-Item -Path "C:\" -Name "CodeCPP" -ItemType "directory"
 New-Item -Path "C:\" -Name "CodeJAVA" -ItemType "directory"
 New-Item -Path "C:\" -Name "CodePYTHON" -ItemType "directory"
-& "C:/JungolTemp/cb.exe /s"
-& "C:/JungolTemp/vscode.exe /Silent"
-& "C:/JungolTemp/anaconda.exe /s"
+& C:/JungolTemp/cb.exe /S
+& C:/JungolTemp/vscode.exe /Silent
+& C:/JungolTemp/anaconda.exe /S
