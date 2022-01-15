@@ -6,6 +6,9 @@ if (-not(Test-Path -Path "C:/JungolTemp")) {
 	    Invoke-WebRequest -Uri "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" -OutFile "C:/JungolTemp/vscode.exe"
 	}
 
+New-Item -Path "C:\" -Name "CodeCPP" -ItemType "directory"
+New-Item -Path "C:\" -Name "CodeJAVA" -ItemType "directory"
+New-Item -Path "C:\" -Name "CodePYTHON" -ItemType "directory"
 & "C:/JungolTemp/cb.exe /s"
 & "C:/JungolTemp/vscode.exe /Silent"
 & "C:/JungolTemp/anaconda.exe /s"
