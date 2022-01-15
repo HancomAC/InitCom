@@ -3,7 +3,7 @@
 ```powershell
 Set-ExecutionPolicy Unrestricted
 
-$scriptUrl = "https://raw.githubusercontent.com/HancomAC/InitCom/main/final.ps1"
+$scriptUrl = "https://raw.githubusercontent.com/HancomAC/InitCom/main/install.ps1"
 $destination = "c:\test.txt"
 $scriptName = "c:\test.ps1"
 
