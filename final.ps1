@@ -8,9 +8,11 @@ IF(!(Test-Path $registryPath))
  ELSE {
     New-ItemProperty -Path $registryPath -Name $name -Value $value -PropertyType DWORD -Force | Out-Null}
 
+New-Item -Path "HKCU:\Software\Policies\Microsoft\Edge" -Name RestoreOnStartupURLs -Force
+$path = 'HKCU:\Software\Policies\Microsoft\Edge\RestoreOnStartupURLs'
 $name = '1'
 $value = 'http://jungol.co.kr'
-New-Item -Path "HKCU:\Software\Policies\Microsoft\Edge" -Name "RestoreOnStartupURLs" –Force -Name $name -Value $value
+Set-Itemproperty -Path $path -Name $name -Value $value
 
 $Shell = New-Object -ComObject ("WScript.Shell")
 $Favorite = $Shell.CreateShortcut("C:\Users\student\Desktop\JUNGOL.lnk")
