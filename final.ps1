@@ -24,5 +24,3 @@ Invoke-WebRequest -Uri "https://ftp.yz.yamagata-u.ac.jp/pub/eclipse/oomph/epp/20
 Expand-Archive -LiteralPath 'C:/JungolTemp/java.zip' -DestinationPath C:\JAVA
 $env:JAVA_HOME = "C:\JAVA\jdk-11.0.1"
 $env:Path += ";%JAVA_HOME%\bin"
-
-Remove-Item –path C:\JungolTemp -recurse
