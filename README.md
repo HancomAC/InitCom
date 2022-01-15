@@ -7,7 +7,7 @@ $scriptUrl = "https://raw.githubusercontent.com/HancomAC/InitCom/main/final.ps1"
 $destination = "c:\test.txt"
 $scriptName = "c:\test.ps1"
 
-Invoke-WebRequest $scriptUrl -OutFile $destination
+Invoke-WebRequest $scriptUrl -OutFile $destination -Headers @{"Cache-Control"="no-cache"}
 
 # if the file was downloaded, delete the old script file and rename the new
 # file
